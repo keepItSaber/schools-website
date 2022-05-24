@@ -19,35 +19,19 @@ const UIStore = useUIStore();
       class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
     >
       <NavigationItem
-        title="HOME"
+        title="ROOMS"
         route="/"
         :is-active="UIStore.isActive('/')"
       />
       <NavigationItem
-        title="SERVICES"
-        route="/services"
+        title="PROFILE"
+        route="/profile"
         :is-active="UIStore.isActive('/services')"
       />
-      <NavigationItem
-        title="ABOUT"
-        route="/about"
-        :is-active="UIStore.isActive('/about')"
-      />
-      <NavigationItem
-        title="CONTACT"
-        route="/contact"
-        :is-active="UIStore.isActive('/contact')"
-      />
-      <NavigationItem
-        title="BLOG'S"
-        route="/blog"
-        :is-active="UIStore.isActive('blog')"
-      />
-
       <button
         class="bg-cyan-400 text-xl text-white duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded"
       >
-        Get started
+        Login
       </button>
     </ul>
   </nav>

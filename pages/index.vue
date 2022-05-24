@@ -1,1 +1,3 @@
-<template>INDEX PAGE</template>
+<template>
+  <div>INDEX PAGE</div>
+</template>
