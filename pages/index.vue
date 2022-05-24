@@ -1,3 +1,5 @@
 <template>
-  <div>INDEX PAGE</div>
+<div>
+  <AuthLogin/>
+</div>
 </template>
