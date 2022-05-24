@@ -48,7 +48,7 @@
               </div>
             </div>
             <div>
-              <button type="submit" class="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-orange-500 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+              <button type="submit" class="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-orange-400 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                 <div class="flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-6 h-6" viewBox="0 0 48 48">
                     <defs>
