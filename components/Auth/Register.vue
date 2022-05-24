@@ -43,7 +43,7 @@ const register = () => {
             
 
               <div>
-                <button onclick="" type="submit" class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-orange-400 rounded-xl hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">Sign up</button>
+                <button onclick="" type="submit" class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-orange-400 rounded-xl hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">Sign up</button>
               </div>
             </div>
             <div class="relative my-4">
@@ -55,7 +55,7 @@ const register = () => {
               </div>
             </div>
             <div>
-              <button type="submit" @click="register" class="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-orange-400 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+              <button type="submit" @click="register" class="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-orange-400 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
                 <div class="flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-6 h-6" viewBox="0 0 48 48">
                     <defs>
