@@ -11,7 +11,7 @@ const UIStore = useUIStore();
           class="h-10 inline"
           src="https://tailwindcss.com/_next/static/media/social-square.b622e290e82093c36cca57092ffe494f.jpg"
         />
-        Tailwind
+        League Teams
       </span>
     </div>
 
