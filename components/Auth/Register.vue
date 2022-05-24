@@ -1,3 +1,14 @@
+<script setup lang="ts">
+const email = ref("");
+const username = ref("");
+const password = ref("");
+
+const register = () => {
+    if(!email.value && !password.value && !username.value){
+      return;
+    }
+}
+</script>
 <template>
 <section>
   <div class="flex min-h-screen overflow-hidden">
@@ -13,26 +24,26 @@
               <div>
                 <label for="email" class="block text-sm font-medium text-neutral-600"> Email address </label>
                 <div class="mt-1">
-                  <input id="email" name="email" type="email" autocomplete="email" required placeholder="Your Email" class="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-neutral-600 bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
+                  <input v-model="email" id="email" name="email" type="email" autocomplete="email" required placeholder="Your Email" class="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-neutral-600 bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
                 </div>
               </div>
               <div>
                 <label for="email" class="block text-sm font-medium text-neutral-600"> Username </label>
                 <div class="mt-1">
-                  <input id="nickname" name="nickname" type="text" required placeholder="Your username" class="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-neutral-600 bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
+                  <input v-model="username" id="username" name="username" type="text" required placeholder="Your username" class="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-neutral-600 bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
                 </div>
               </div>
 
               <div class="space-y-1">
                 <label for="password" class="block text-sm font-medium text-neutral-600"> Password </label>
                 <div class="mt-1">
-                  <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Your Password" class="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-neutral-600 bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
+                  <input v-model="password" id="password" name="password" type="password" autocomplete="current-password" required placeholder="Your Password" class="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-neutral-600 bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300">
                 </div>
               </div>
             
 
               <div>
-                <button type="submit" class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-orange-400 rounded-xl hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">Sign in</button>
+                <button onclick="" type="submit" class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-orange-400 rounded-xl hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">Sign up</button>
               </div>
             </form>
             <div class="relative my-4">
@@ -44,7 +55,7 @@
               </div>
             </div>
             <div>
-              <button type="submit" class="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-orange-400 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+              <button type="submit" @click="register" class="w-full items-center block px-10 py-3.5 text-base font-medium text-center text-orange-400 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                 <div class="flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-6 h-6" viewBox="0 0 48 48">
                     <defs>
