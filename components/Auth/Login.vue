@@ -75,7 +75,7 @@ const login = () => {
                       name="remember-me"
                       type="checkbox"
                       placeholder="Your password"
-                      class="w-4 h-4 text-blue-600 border-gray-200 rounded focus:ring-blue-500"
+                      class="w-4 h-4 text-orange-600 border-gray-200 rounded focus:ring-orange-500"
                     />
                     <label
                       for="remember-me"
@@ -88,7 +88,7 @@ const login = () => {
                   <div class="text-sm">
                     <a
                       href="#"
-                      class="font-medium text-blue-600 hover:text-blue-500"
+                      class="font-medium text-orange-400 hover:text-orange-500"
                     >
                       Forgot your password?
                     </a>
@@ -99,7 +99,7 @@ const login = () => {
                   <button
                     @click="login"
                     type="submit"
-                    class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-orange-500 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-orange-500 rounded-xl hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
                   >
                     Sign in
                   </button>

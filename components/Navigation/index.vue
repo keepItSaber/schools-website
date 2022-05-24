@@ -29,8 +29,7 @@ const UIStore = useUIStore();
         :is-active="UIStore.isActive('/profile')"
       />
       <button
-        class="bg-cyan-400 text-xl text-white duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded"
-      >
+        class="bg-orange-400 text-xl text-white duration-500 px-6 py-2 mx-4 hover:bg-orange-500 rounded">
         Login
       </button>
     </ul>
