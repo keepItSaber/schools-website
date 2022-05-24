@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 import { useUIStore } from "~~/store/ui";
 
 interface NavigationItemProps {
