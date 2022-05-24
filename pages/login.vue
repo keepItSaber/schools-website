@@ -1,26 +1,16 @@
 <script setup lang="ts">
-import { User } from "@firebase/auth-types";
-import { validateArgCount } from "@firebase/util";
-import { NuxtPage } from "@nuxt/schema";
-import { userInfo } from "os";
-import { mapActions } from "pinia";
 import { useAuthStore } from "~~/store/auth";
 
 const store = useAuthStore();
-const email = ref("");
-const password = ref("");
+const email = ref("test@test.com");
+const password = ref("heslo123");
 const remember = ref(false);
-var user = null;
 
 const login = async () => {
-  if (!email.value && !password.value) {
-    return;
-  }
-  user = await store.signInUser(email.value, password.value);
-  console.log(user);
-  if (user) {
-    return;
-  }
+  // if (!email.value && !password.value) {
+  // }
+  await store.signInUser(email.value, password.value);
+  console.log(store.user);
 };
 </script>
 <template>

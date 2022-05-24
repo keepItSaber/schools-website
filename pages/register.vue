@@ -3,19 +3,16 @@ import { useAuthStore } from "~~/store/auth";
 
 const store = useAuthStore();
 
-const email = ref("");
-const username = ref("");
-const password = ref("");
+const email = ref("test@test.com");
+const username = ref("Test");
+const password = ref("heslo123");
 
 const register = async () => {
-  console.log("register");
+  // if (!email.value && !password.value && !username.value) {
+  //   return;
+  // }
 
-  if (!email.value && !password.value && !username.value) {
-    return;
-  }
-
-  await store.signUpUser(email.value, password.value);
-  console.log(store.user);
+  await store.signUpUser(email.value, username.value, password.value);
 };
 </script>
 <template>
