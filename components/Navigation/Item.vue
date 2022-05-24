@@ -23,8 +23,8 @@ const changeCurrentRoute = () => {
     <NuxtLink
       @click="changeCurrentRoute"
       :to="route"
-      class="text-xl hover:text-cyan-500 duration-500"
-      :class="{ 'text-cyan-500': isActive }"
+      class="text-xl hover:text-orange-400 duration-500"
+      :class="{ 'text-orange-400': isActive }"
     >
       {{ title }}
     </NuxtLink>

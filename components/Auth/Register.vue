@@ -9,7 +9,7 @@
 
         <div class="mt-8">
           <div class="mt-6">
-            <form action="#" method="POST" class="space-y-6">
+            <div class="space-y-6">
               <div>
                 <label for="email" class="block text-sm font-medium text-neutral-600"> Email address </label>
                 <div class="mt-1">
@@ -34,7 +34,7 @@
               <div>
                 <button type="submit" class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-orange-400 rounded-xl hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">Sign in</button>
               </div>
-            </form>
+            </div>
             <div class="relative my-4">
               <div class="absolute inset-0 flex items-center">
                 <div class="w-full border-t border-gray-300"></div>
