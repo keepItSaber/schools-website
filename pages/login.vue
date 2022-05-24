@@ -1,10 +1,24 @@
 <script setup lang="ts">
+import { User } from "@firebase/auth-types";
+import { validateArgCount } from "@firebase/util";
+import { NuxtPage } from "@nuxt/schema";
+import { userInfo } from "os";
+import { mapActions } from "pinia";
+import { useAuthStore } from "~~/store/auth";
+
+const store = useAuthStore();
 const email = ref("");
 const password = ref("");
 const remember = ref(false);
+var user = null;
 
-const login = () => {
+const login = async () => {
   if (!email.value && !password.value) {
+    return;
+  }
+  user = await store.signInUser(email.value, password.value);
+  console.log(user);
+  if (user) {
     return;
   }
 };
@@ -75,7 +89,7 @@ const login = () => {
                       name="remember-me"
                       type="checkbox"
                       placeholder="Your password"
-                      class="w-4 h-4 text-orange-600 border-gray-200 rounded focus:ring-orange-500"
+                      class="w-4 h-4 accent-orange-400 text-orange-600 border-gray-200 rounded focus:ring-orange-500"
                     />
                     <label
                       for="remember-me"
