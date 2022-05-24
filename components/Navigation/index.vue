@@ -26,7 +26,7 @@ const UIStore = useUIStore();
       <NavigationItem
         title="PROFILE"
         route="/profile"
-        :is-active="UIStore.isActive('/services')"
+        :is-active="UIStore.isActive('/profile')"
       />
       <button
         class="bg-cyan-400 text-xl text-white duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded"
