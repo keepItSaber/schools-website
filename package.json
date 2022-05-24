@@ -7,11 +7,13 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@pinia/nuxt": "^0.1.8",
     "nuxt": "3.0.0-rc.3",
     "sass": "^1.51.0",
-    "@pinia/nuxt": "^0.1.8"
+    "@nuxtjs/tailwindcss": "^5.1.2"
   },
   "dependencies": {
+    "firebase": "^9.7.0",
     "pinia": "^2.0.13"
   }
 }
