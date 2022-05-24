@@ -3,7 +3,6 @@ import { defineStore } from "pinia";
 export interface UIState {
   isSidebarVisible: boolean;
   activeRoute: string;
-  isAuthVisible: boolean;
   activeAuthView: AuthView;
 }
 
@@ -14,7 +13,6 @@ export enum AuthView {
 
 const state = (): UIState => ({
   isSidebarVisible: false,
-  isAuthVisible: false,
   activeAuthView: AuthView.LOGIN,
   activeRoute: "/",
 });
