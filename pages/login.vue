@@ -1,12 +1,16 @@
 <script setup lang="ts">
-const email = ref("");
-const password = ref("");
+import { useAuthStore } from "~~/store/auth";
+
+const store = useAuthStore();
+const email = ref("test@test.com");
+const password = ref("heslo123");
 const remember = ref(false);
 
-const login = () => {
-  if (!email.value && !password.value) {
-    return;
-  }
+const login = async () => {
+  // if (!email.value && !password.value) {
+  // }
+  await store.signInUser(email.value, password.value);
+  console.log(store.user);
 };
 </script>
 <template>
@@ -75,7 +79,7 @@ const login = () => {
                       name="remember-me"
                       type="checkbox"
                       placeholder="Your password"
-                      class="w-4 h-4 text-orange-600 border-gray-200 rounded focus:ring-orange-500"
+                      class="w-4 h-4 accent-orange-400 text-orange-600 border-gray-200 rounded focus:ring-orange-500"
                     />
                     <label
                       for="remember-me"

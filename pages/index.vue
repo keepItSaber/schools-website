@@ -1,6 +1,6 @@
 <template>
-<div>
-  <AuthLogin/>
-  <AuthRegister/>
-</div>
+  <div>
+    <AuthLogin />
+    <AuthRegister />
+  </div>
 </template>
