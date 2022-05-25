@@ -7,10 +7,7 @@ const password = ref("heslo123");
 const remember = ref(false);
 
 const login = async () => {
-  // if (!email.value && !password.value) {
-  // }
   await store.signInUser(email.value, password.value);
-  console.log(store.user);
 };
 </script>
 <template>
@@ -21,9 +18,7 @@ const login = async () => {
       >
         <div class="w-full max-w-xl mx-auto lg:w-96">
           <div>
-            <h2 class="mt-6 text-3xl font-extrabold text-neutral-600">
-              Sign in.
-            </h2>
+            <h2 class="mt-6 text-3xl font-extrabold text-neutral-600">Login</h2>
           </div>
 
           <div class="mt-8">
@@ -107,6 +102,14 @@ const login = async () => {
                   >
                     Sign in
                   </button>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-sm text-neutral-400"
+                    >Don't have an account yet ?</span
+                  >
+                  <NuxtLink to="/register" class="text-sm text-orange-500"
+                    >Sign Up</NuxtLink
+                  >
                 </div>
               </div>
               <div class="relative my-4">

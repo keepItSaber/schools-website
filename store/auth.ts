@@ -1,9 +1,15 @@
-import { collection, doc, Firestore, setDoc } from "firebase/firestore";
-import { User } from "./../node_modules/@firebase/auth-types/index.d";
+import {
+  collection,
+  doc,
+  Firestore,
+  onSnapshot,
+  setDoc,
+} from "firebase/firestore";
 import { defineStore } from "pinia";
 
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { User } from "~~/models/User";
 export interface AuthState {
   firestore?: Firestore;
   user?: User;
@@ -13,6 +19,7 @@ const state = (): AuthState => ({});
 
 const getters = {
   collectionRef: (state: AuthState) => collection(state.firestore, "users"),
+  userRef: (state: AuthState) => doc(state.firestore, `users/${state.user.id}`),
 };
 
 const actions = {
@@ -31,7 +38,7 @@ const actions = {
       //* create user Doc after registration
 
       const partialUser: PartialUser = {
-        userId: userCredentials.user.uid,
+        id: userCredentials.user.uid,
         username: username,
       };
 
@@ -49,19 +56,29 @@ const actions = {
         email,
         password
       );
+
+      this.fetchUser(userCredentials.user.uid);
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
     }
   },
-  async createUserDocument(partialUser: PartialUser) {
-    const docRef = doc(this.collectionRef);
+  async createUser(partialUser: PartialUser) {
+    const docRef = doc(this.firestore, `users/${partialUser.id}`);
     this.user = {
       id: docRef.id,
       ...partialUser,
     };
 
     await setDoc(docRef, this.user);
+    this.fetchUser();
+  },
+  async fetchUser(id: string) {
+    // window.localStorage.setItem("userId", id);
+    onSnapshot(doc(this.firestore, `users/${id}`), (doc) => {
+      this.user = doc.data();
+      console.log(this.user);
+    });
   },
 };
 
@@ -72,6 +89,6 @@ export const useAuthStore = defineStore("authStore", {
 });
 
 interface PartialUser {
-  userId: string;
+  id: string;
   username: string;
 }

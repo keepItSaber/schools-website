@@ -101,6 +101,14 @@ const register = async () => {
                     Sign up
                   </button>
                 </div>
+                <div class="flex justify-between">
+                  <span class="text-sm text-neutral-400"
+                    >Already have an account ?</span
+                  >
+                  <NuxtLink to="/login" class="text-sm text-orange-500"
+                    >Login</NuxtLink
+                  >
+                </div>
               </div>
               <div class="relative my-4">
                 <div class="absolute inset-0 flex items-center">
